@@ -1,0 +1,2 @@
+rootProject.name = 'minio-fileserver'
+include 'mf-api','mf-core'

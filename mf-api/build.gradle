@@ -1,0 +1,20 @@
+
+apply plugin: 'org.springframework.boot'
+version = "${rootProject.version}" //也可以不写，默认继承父模块 version
+archivesBaseName = 'mf-api'
+
+dependencies{
+
+    compile project(":mf-core")
+
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    //切面
+    compile group: 'org.aspectj', name: 'aspectjrt', version: '1.8.13'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.13'
+    compile group: 'io.minio', name: 'minio', version: '5.0.4'
+
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '1.3.0.RELEASE'
+    compile("org.springframework.boot:spring-boot-starter-test")
+}
