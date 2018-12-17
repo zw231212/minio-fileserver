@@ -2,7 +2,7 @@ server:
   port: 8081
 
 minio:
-  endpoint: http://10.2.16.5:9001
-  accessKey: escience123
-  secretKey: escience122
+  endpoint: http://10.2.16.5:9000
+  accessKey: 20EA802BD1FD36ABB4CCC9037EF3AF34
+  secretKey: D547A8CD8EB93EDE9497DADF5AC354AE
   secure: false

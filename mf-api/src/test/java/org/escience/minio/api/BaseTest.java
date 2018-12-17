@@ -2,6 +2,8 @@ package org.escience.minio.api;
 
 import java.util.Enumeration;
 import java.util.Properties;
+import java.util.UUID;
+
 import org.junit.Test;
 
 public class BaseTest {
@@ -29,6 +31,18 @@ public class BaseTest {
     if(contains != -1){
       System.out.println(url.replaceAll("\\.\\.",""));
     }
+  }
+
+  @Test
+  public void testUUID(){
+    String s = UUID.randomUUID().toString();
+    System.out.println(s);
+    String escience = UUID.nameUUIDFromBytes("escience".getBytes()).toString()
+            .replaceAll("-","").toUpperCase();
+    System.out.println(escience);
+    String nstr = UUID.nameUUIDFromBytes(("escience" + "nstr").getBytes()).toString()
+            .replaceAll("-","").toUpperCase();
+    System.out.println(nstr);
   }
 
 }

@@ -18,3 +18,19 @@ dependencies{
     compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '1.3.0.RELEASE'
     compile("org.springframework.boot:spring-boot-starter-test")
 }
+
+jar {
+    from {
+        //添加依懒到打包文件
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+//        configurations.runtime.collect{zipTree(it)}
+    }
+
+    manifest {
+
+        attributes 'Implementation-Title': 'minio fileserver',
+                'Implementation-Version': version,
+                'Main-Class': "org.escience.minio.api.MinioFileserverAPIApplication" //指定 Jar 启动 Main
+
+    }
+}
