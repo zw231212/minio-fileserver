@@ -46,7 +46,7 @@ minio会创建这样的文件层级。
 API信息
 -------
 ```js
-var domain="https://storege.dataopen.cn"
+var domain="https://storege.dataopen.cn";
 var apis = [{"url":domain+"/share/{path}?name=fileName",
 "description":"domain是域名（暂定是storege.dataopen.cn），share是固定的，" +
  "path是最顶层bucket信息，参数name是文件的名字。",
